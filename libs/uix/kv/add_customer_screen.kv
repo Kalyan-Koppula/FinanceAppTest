@@ -1,0 +1,167 @@
+<AddCustomerScreen>
+    MDBoxLayout:
+        orientation: "vertical"
+        valign: "top"
+
+        MDToolbar:
+            title: "Add Customer"
+            specific_text_color: 1, 1, 1, 1
+            left_action_items: [["arrow-left", lambda x: root.manager.set_screen(name="home", side="right")]]
+            right_action_items: [["check-bold", lambda x: root.save_details()]]
+        ScrollView:
+
+            MDBoxLayout:
+                orientation: "vertical"
+                adaptive_height: True
+                padding: "15dp"
+                spacing: "10dp"
+
+
+                MDBoxLayout:
+                    orientation: "horizontal"
+                    padding: "10dp"
+                    size_hint_y: None
+                    height: text_name.height
+                    MDIcon:
+                        icon: "account"
+                        size_hint_x: .2
+                        pos_hint: {"center_y": .5}
+
+                    MDTextField:
+                        id: text_name
+                        hint_text: "Name"
+                        pos_hint: {"center_y": .5}
+                        mode: "rectangle"
+                        size_hint_x: 0.75
+                
+                MDBoxLayout:
+                    orientation: "horizontal"
+                    padding: "10dp"
+                    size_hint_y: None
+                    height: text_amount.height
+                    MDIcon:
+                        icon: "cash-multiple"
+                        size_hint_x: .2
+                        pos_hint: {"center_y": .5}
+
+                    MDTextField:
+                        id: text_amount
+                        hint_text: "Amount"
+                        input_filter: 'int'
+                        pos_hint: {"center_y": .5}
+                        mode: "rectangle"
+                        size_hint_x: 0.75
+                
+                MDBoxLayout:
+                    orientation: "horizontal"
+                    padding: "10dp"
+                    size_hint_y: None
+                    height: text_date.height
+                    MDIcon:
+                        icon: "calendar"
+                        size_hint_x: .2
+                        pos_hint: {"center_y": .5}
+
+                    MDTextField:
+                        id: text_date
+                        hint_text: "Date given"
+                        pos_hint: {"center_y": .5}
+                        mode: "rectangle"
+                        size_hint_x: 0.75
+                        on_focus: root.show_date_picker()
+
+                MDBoxLayout:
+                    orientation: "horizontal"
+                    padding: "10dp"
+                    size_hint_y: None
+                    height: text_date.height
+                    MDIcon:
+                        icon: "card-account-details"
+                        size_hint_x: .2
+                        pos_hint: {"center_y": .5}
+
+                    MDLabel:
+                        text: "Aadhar Card"
+                        halign: "center"
+                        markup: True
+                        size_hint_x: 0.6
+                    
+                    MDCheckbox:
+                        id: aadhar_box
+                        size_hint_x: 0.2
+                        pos_hint: {'center_x': .5, 'center_y': .5}
+                
+                MDBoxLayout:
+                    orientation: "horizontal"
+                    padding: "10dp"
+                    size_hint_y: None
+                    height: text_date.height
+                    MDIcon:
+                        icon: "certificate"
+                        size_hint_x: .2
+                        pos_hint: {"center_y": .5}
+
+                    MDLabel:
+                        text: "Bond"
+                        halign: "center"
+                        markup: True
+                        size_hint_x: 0.6
+                    
+                    MDCheckbox:
+                        size_hint_x: 0.2
+                        pos_hint: {'center_x': .5, 'center_y': .5}
+
+                MDBoxLayout:
+                    orientation: "horizontal"
+                    padding: "10dp"
+                    size_hint_y: None
+                    height: text_guaranter.height
+                    MDIcon:
+                        icon: "account-plus"
+                        size_hint_x: .2
+                        pos_hint: {"center_y": .5}
+
+                    MDTextField:
+                        id: text_guaranter
+                        hint_text: "Guaranter"
+                        pos_hint: {"center_y": .5}
+                        mode: "rectangle"
+                        size_hint_x: 0.75
+                
+                MDBoxLayout:
+                    orientation: "horizontal"
+                    padding: "10dp"
+                    size_hint_y: None
+                    height: text_phone.height
+                    MDIcon:
+                        icon: "phone"
+                        size_hint_x: .2
+                        pos_hint: {"center_y": .5}
+
+                    MDTextField:
+                        id: text_phone
+                        hint_text: "Phone"
+                        input_filter: 'int'
+                        pos_hint: {"center_y": .5}
+                        mode: "rectangle"
+                        size_hint_x: 0.75
+                
+                MDBoxLayout:
+                    orientation: "horizontal"
+                    padding: "10dp"
+                    size_hint_y: None
+                    height: text_address.height
+                    MDIcon:
+                        icon: "home-city"
+                        size_hint_x: .2
+                        pos_hint: {"center_y": .5}
+
+                    MDTextField:
+                        id: text_address
+                        hint_text: "Address"
+                        pos_hint: {"center_y": .5}
+                        mode: "rectangle"
+                        size_hint_x: 0.75
+
+                
+                
